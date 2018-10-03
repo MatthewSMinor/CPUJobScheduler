@@ -27,7 +27,6 @@ public class JobScheduling {
     
     public static void main(String[] args) {
         
-        
         Thread startJob = new Job();
         startJob.start();
         

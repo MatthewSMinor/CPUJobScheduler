@@ -41,7 +41,6 @@ public class DoJobs extends Thread{
                 
 
             }
-            
             try{
                 Thread.sleep(5000);
             }
