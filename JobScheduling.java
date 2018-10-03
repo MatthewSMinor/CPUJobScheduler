@@ -27,12 +27,12 @@ public class JobScheduling {
     
     public static void main(String[] args) {
         
-        final int timeSlice = 15;
         
         Thread startJob = new Job();
         startJob.start();
         
-        //System.out.println(jobs);
+        Thread doJobs = new DoJobs();
+        doJobs.start();
     }
     
 }

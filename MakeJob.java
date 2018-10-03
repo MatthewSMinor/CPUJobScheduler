@@ -25,9 +25,13 @@ public class MakeJob {
         return time2Complete;
     }
     
+    public void setTime(int a){
+        this.time2Complete = a;
+    }
+    
     @Override
     public String toString(){
-        String r = "Priority = " + priority + "\tTime to Complete =  " + time2Complete;
+        String r = "Priority = " + priority + " : Time to Complete =  " + time2Complete;
         return r;
     }
     
