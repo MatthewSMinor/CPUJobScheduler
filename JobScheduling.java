@@ -33,6 +33,7 @@ public class JobScheduling {
         
         Thread doJobs = new DoJobs();
         doJobs.start();
+        
     }
     
 }

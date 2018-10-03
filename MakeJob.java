@@ -26,7 +26,7 @@ public class MakeJob {
     }
     
     public void setTime(int a){
-        this.time2Complete = a;
+        time2Complete = a;
     }
     
     @Override

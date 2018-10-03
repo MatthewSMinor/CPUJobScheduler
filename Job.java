@@ -18,14 +18,14 @@ public class Job extends Thread{
         //thread runs 10 times
         for(int i = 0; i < 10; i++){
             Random r = new Random();
-            priority = r.nextInt((4-1)+1);
+            priority = r.nextInt((4-1)+1)+1;
             Random n = new Random();
-            time2Complete = n.nextInt((20-1)+1);
+            time2Complete = n.nextInt((20-1)+1)+1;
             
             MakeJob job = new MakeJob(priority, time2Complete);
             
-            System.out.println("priority = "+job.getPriority());
-            System.out.println("time = " + job.getTime());
+            System.out.println("\n\tpriority = "+job.getPriority());
+            System.out.println("\ttime = " + job.getTime() + "\n");
 
             //return the job to be added to main job queue
             JobScheduling.jobs.add(job);
@@ -35,7 +35,7 @@ public class Job extends Thread{
             
             //thread waits 5 seconds to make a new job
             try{
-                Thread.sleep(5000);
+                Thread.sleep(3000);
             }
             catch(InterruptedException e){
             
