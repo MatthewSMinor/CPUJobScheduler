@@ -21,7 +21,7 @@ public class DoJobs extends Thread{
                 System.out.println("Queue is empty here.");
             }            
             else{
-                System.out.println("\tStarted working a Job");
+                System.out.println("\n\tStarted working a Job");
                 //do jobs for certain time slice
                 MakeJob job = new MakeJob(JobScheduling.jobs.peek().getPriority(), JobScheduling.jobs.peek().getTime());
                 
@@ -33,14 +33,17 @@ public class DoJobs extends Thread{
                 if(timeLeft > 0){
                     job.setTime(timeLeft);
                     JobScheduling.jobs.add(job);
-                    System.out.println("\tStopped working on Job, if time was higher than timeSlice (10), then it should be back in the queue.");
+                    System.out.println("\tStopped working on Job, if time was higher than timeSlice (10), then it should be back in the queue.\n");
                 }
                 else{
-                    System.out.println("\tFinished Job");
+                    System.out.println("\tFinished Job\n");
                 }
                 
-
+                    
             }
+            
+            System.out.println(JobScheduling.jobs.toString());
+            
             try{
                 Thread.sleep(5000);
             }
